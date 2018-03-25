@@ -72,6 +72,10 @@ class Actor{
 			return false;
 		}
 		 
+		if((this.pos.x === actor.pos.x + actor.size.x)||(actor.pos.x === this.pos.x + actor.size.x)||
+		(this.pos.y === actor.pos.y + actor.size.y)||(actor.pos.y === this.pos.y + actor.size.y)){
+			return false;
+		}
 		 return (this.pos.x <= actor.pos.x + actor.size.x && this.pos.x >= actor.pos.x && 
 		 this.pos.y <= actor.pos.y + actor.size.y && this.pos.y >= actor.pos.y) ||
 		 (this.pos.x <= actor.pos.x + actor.size.x && this.pos.x >= actor.pos.x && 
